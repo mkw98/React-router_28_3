@@ -7,8 +7,12 @@ import { getCountries } from './actions/actions-countries';
 
 render(
 	<Provider store={store}>
-		<h1>Inicjalizacja projektu</h1>
-		<DevTools />
+		<div>
+			<h1>Inicjalizacja projektu</h1>
+			<DevTools />
+		</div>
 	</Provider>,
 	document.getElementById('root')
 );
+
+store.dispatch(getCountries());
